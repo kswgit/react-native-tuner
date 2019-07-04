@@ -9,7 +9,7 @@ export default class App extends Component {
     note: {
       name: "A",
       octave: 4,
-      frequency: 440
+      frequency: 442,
     }
   };
 

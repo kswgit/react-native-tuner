@@ -6,11 +6,14 @@ export default class Meter extends PureComponent {
     cents: new Animated.Value(0)
   };
 
-  componentWillReceiveProps(props) {
-    Animated.timing(this.state.cents, {
-      toValue: props.cents,
+
+
+  static getDerivedStateFromProps(nextProps, prevState) {
+    Animated.timing(prevState.cents, {
+      toValue: nextProps.cents,
       duration: 500
     }).start();
+    return null
   }
 
   render() {
